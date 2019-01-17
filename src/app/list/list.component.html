@@ -1,0 +1,10 @@
+<input style="width: 100%; margin-top: 10px" class="form-control form-control-lg" placeholder="Search Product" type="text" [(ngModel)]=searchKey>
+<button style="width: 100%; margin-top: 10px" (click)=searchProducts()>Search Product</button>
+<div *ngFor="let model of models | async">
+  <div class="card" style="width: 100%; margin-top: 10px">
+    <div class="card-body">
+      <h5 class="card-title">{{model.brandName}}</h5>
+      <h6 class="card-subtitle mb-2 text muted">{{model.modelName}}</h6>
+    </div>
+  </div>
+</div>
